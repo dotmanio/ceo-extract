@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
   /* background-color: #f0f0f0; */
   max-height: 100%;
-  background-color: rgb(71, 67, 67);
+  background-color: rgb(95, 67, 110);
 }
 a {
   list-style: none;
@@ -28,7 +28,7 @@ a:hover {
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  background-image: url(images/banner2.jpg);
+  background-image: url(images/banner1.jpg);
 }
 
 header {
@@ -59,17 +59,17 @@ main {
 }
 
 .btn-primary {
-  background-color: #36470d;
+  background-color: #990e7d;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: rgb(136, 98, 29);
+  background-color: rgb(49, 216, 31);
   transition: 1s;
 }
 
 .btn-secondary {
-  background-color: #36470d;
+  background-color: #d8c22c;
   color: white;
 }
 
