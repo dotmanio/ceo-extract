@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from michaelofoegbu.github.io/ceo/code.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 04:26:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Code Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-image: url(images/banner2.jpg);
+        color: #d8cbcb;
+        text-align: center;
+      }
+      textarea {
+        width: 100%;
+        color: black;
+        height: 120px;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #d8cbcb;
+      }
+      button {
+        display: block;
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: rgb(136, 98, 29);
+        color: white;
+        border: none;
+        border-radius: 200px;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #36470d;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Search Code Generator</h2>
+    <textarea
+      id="sentences"
+      placeholder="Paste your list of sentences here..."
+      spellcheck="false"
+    ></textarea>
+    <button onclick="generateCode()">Generate Code</button>
+
+    <h2>Generated Code:</h2>
+    <textarea id="generatedCode" readonly spellcheck="false"></textarea>
+
+    <script>
+      function generateCode() {
+        var sentencesInput = document.getElementById("sentences").value;
+        var sentencesArray = sentencesInput
+          .split("\n")
+          .map(function (sentence) {
+            return sentence.trim();
+          })
+          .filter(function (sentence) {
+            return sentence !== "";
+          });
+
+        var generatedCode = generateJavaScriptCode(sentencesArray);
+        document.getElementById("generatedCode").value = generatedCode;
+      }
+
+      function generateJavaScriptCode(sentences) {
+        var jsCode = [];
+        jsCode.push(
+          "// Paste the generated JavaScript code into the browser console and press Enter:"
+        );
+        jsCode.push("");
+
+        sentences.forEach(function (sentence) {
+          var searchQuery = sentence;
+          var searchUrl =
+            "https://www.google.com/search?q=" +
+            encodeURIComponent(searchQuery);
+          var line = 'window.open("' + searchUrl + '", "_blank");';
+          jsCode.push(line);
+        });
+
+        return jsCode.join("\n");
+      }
+    </script>
+  </body>
+
+<!-- Mirrored from michaelofoegbu.github.io/ceo/code.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 04:26:45 GMT -->
+</html>
