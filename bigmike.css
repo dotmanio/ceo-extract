@@ -28,7 +28,7 @@ a:hover {
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  background-image: url(images/banner1.jpg);
+  background-image: url(images/banner2.jpg);
 }
 
 header {
@@ -79,17 +79,17 @@ main {
 }
 
 .btn-tertiary {
-  background-color: #36470d;
+  background-color: #c114ad;
   color: white;
 }
 
 .btn-tertiary:hover {
-  background-color: rgb(136, 98, 29);
+  background-color: rgb(16, 205, 95);
   transition: 1s;
 }
 
 .btn-accent {
-  background-color: #36470d;
+  background-color: #de7b0bb5;
   color: #333;
 }
 
